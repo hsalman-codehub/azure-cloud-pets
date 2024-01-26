@@ -89,7 +89,7 @@ stages:
             inputs:
               action: deploy
               kubernetesServiceConnection: hsazurepetstore-akscluster-ingress-petstoreservices-1438
-              namespace: ingress-basic
+              namespace: ingress-petstoreservices
               manifests: |
                 $(Pipeline.Workspace)/manifests/petstoreproductservice-deployment-everything-enabled.yml
                 $(Pipeline.Workspace)/manifests/petstoreproductservice-service-everything-enabled.yml
