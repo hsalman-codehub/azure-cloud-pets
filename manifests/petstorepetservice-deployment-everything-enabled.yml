@@ -17,7 +17,7 @@ spec:
         agentpool: nodepool1
       containers:
       - name: petstoreservice
-        image: petstoreproductservice.azurecr.io/petstorepetservice:latest
+        image: hsazurepetstorecr.azurecr.io/petstorepetservice:latest
         resources:
           requests:
             cpu: 250m
