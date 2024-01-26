@@ -94,7 +94,7 @@ stages:
                 $(Pipeline.Workspace)/manifests/petstorepetservice-deployment-everything-enabled.yml
                 $(Pipeline.Workspace)/manifests/petstorepetservice-service-everything-enabled.yml
               imagePullSecrets: |
-                $(imagePullSecret)
+                'hsazurepetstorecrca08-auth'
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
                 
