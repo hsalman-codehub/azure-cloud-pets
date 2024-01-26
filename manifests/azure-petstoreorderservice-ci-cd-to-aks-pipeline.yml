@@ -93,7 +93,5 @@ stages:
               manifests: |
                 $(Pipeline.Workspace)/manifests/petstoreorderservice-deployment-everything-enabled.yml
                 $(Pipeline.Workspace)/manifests/petstoreorderservice-service-everything-enabled.yml
-              imagePullSecrets: |
-                $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
