@@ -16,12 +16,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'ecba6859-66dd-4dd0-b632-7afa59f09e73'
+  dockerRegistryServiceConnection: '673b08f0-7e8e-429a-a62f-07defed93708'
   imageRepository: 'petstorepetservice'
   containerRegistry: 'hsazurepetstorecr.azurecr.io'
   dockerfilePath: 'petstore/petstorepetservice/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: '$(crImagePullSecretGlobal)'
+  imagePullSecret: 'hsazurepetstorecr1969c567-auth'
   
 stages:
 - stage: Build
@@ -93,8 +93,6 @@ stages:
               manifests: |
                 $(Pipeline.Workspace)/manifests/petstorepetservice-deployment-everything-enabled.yml
                 $(Pipeline.Workspace)/manifests/petstorepetservice-service-everything-enabled.yml
-              imagePullSecrets: |
-                'hsazurepetstorecrca08-auth'
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
                 
