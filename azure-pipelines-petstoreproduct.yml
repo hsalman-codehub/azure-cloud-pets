@@ -83,8 +83,8 @@ stages:
     strategy:
       runOnce:
         deploy:
-          steps:
-          - task: KubernetesManifest@0
+          steps: 
+          - task: KubernetesManifest@0 # I created this myself if we want to create the secret to be used in the pod as imagepull secret and passed in the next task
             displayName: Create imagePullSecret
             inputs:
               action: 'createSecret'
